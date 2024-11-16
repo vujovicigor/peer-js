@@ -19,14 +19,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
       debug: 3,
       config: {
           'iceServers': [
-              { url: "stun:162.243.208.114:3478" },
-              { url: 'stun:stun1.l.google.com:19302' },
-              {
-                  url: 'turn:numb.viagenie.ca',
-                  credential: 'muazkh',
-                  username: 'webrtc@live.com'
-              }
-          ]
+            {
+              urls: "stun:stun.relay.metered.ca:80",
+            },
+            {
+              urls: "turn:global.relay.metered.ca:80",
+              username: "c749ff5cf20f0ae057241b1e",
+              credential: "QF0c11Moj6lYZF+w",
+            },
+            {
+              urls: "turn:global.relay.metered.ca:80?transport=tcp",
+              username: "c749ff5cf20f0ae057241b1e",
+              credential: "QF0c11Moj6lYZF+w",
+            },
+            {
+              urls: "turn:global.relay.metered.ca:443",
+              username: "c749ff5cf20f0ae057241b1e",
+              credential: "QF0c11Moj6lYZF+w",
+            },
+            {
+              urls: "turns:global.relay.metered.ca:443?transport=tcp",
+              username: "c749ff5cf20f0ae057241b1e",
+              credential: "QF0c11Moj6lYZF+w",
+            },
+        ]
       }
   });
 
