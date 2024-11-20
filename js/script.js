@@ -27,6 +27,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
       config: {
           'iceServers': [
             {
+                urls: "stun:turn.vujson.com:3478",
+              },
+              {
+                urls: "turn:turn.vujson.com:3478",
+                username: "test",
+                credential: "test123",
+              },            
+            /*
+            {
               urls: "stun:stun.relay.metered.ca:80",
             },
             {
@@ -49,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
               username: "c749ff5cf20f0ae057241b1e",
               credential: "QF0c11Moj6lYZF+w",
             },
+            */
         ]
       }
   });
